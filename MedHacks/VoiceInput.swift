@@ -27,7 +27,12 @@ class ViewController: UIViewController {
 		]
 		
 		// All three of these calls are equivalent
-		Alamofire.request("https://mywebsite.com/post", parameters: parameters)
+		Alamofire.request("https://mywebsite.com/post", parameters: parameters).responseJSON { response in
+				print(response.request)
+				print(response.response)
+				print(response.data)
+				print(response.result)
+		}
 	
 	
 		// Get Request - 100% works

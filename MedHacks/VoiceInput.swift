@@ -31,7 +31,6 @@ class ViewController: UIViewController {
 				print("JSON: \(JSON)")
 			}
 		}
-		
 	}
 }
 extension String: ParameterEncoding {
@@ -41,7 +40,6 @@ extension String: ParameterEncoding {
 		request.httpBody = data(using: .utf8, allowLossyConversion: false)
 		return request
 	}
-	
 }
 
 

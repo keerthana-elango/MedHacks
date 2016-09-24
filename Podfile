@@ -6,4 +6,6 @@ target 'MedHacks' do
 
   # Pods for MedHacks
 pod 'Alamofire', '~> 4.0'
+pod 'Cosmos', '~> 6.0'
+pod 'ProjectOxfordFace'
 end

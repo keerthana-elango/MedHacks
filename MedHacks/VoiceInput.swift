@@ -11,8 +11,11 @@ import Alamofire
 
 class ViewController: UIViewController {
 	
+    @IBOutlet weak var beginRecordingButton: UIButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        beginRecordingButton.layer.cornerRadius = 10
 		
 		// Data from user input - currently bs
 		let myString = "Today I'm feeling sad"
@@ -20,20 +23,17 @@ class ViewController: UIViewController {
 		print(myString)
 		
 		// Post request - new for Swift 3.0 & Alamofire 4.0, needs to be tested
-//		Alamofire.request("http://mywebsite.com/post", method: .post, parameters: [:], encoding: "myString", headers: [:])
-		
+
 		let parameters: Parameters = [
 			"test": "myString",
 		]
-		
-		// All three of these calls are equivalent
+
 		Alamofire.request("https://mywebsite.com/post", parameters: parameters).responseJSON { response in
 				print(response.request)
 				print(response.response)
 				print(response.data)
 				print(response.result)
 		}
-	
 	
 		// Get Request - 100% works
 		Alamofire.request("http://mywebsite.com/get").responseJSON { response in
@@ -48,14 +48,3 @@ class ViewController: UIViewController {
 		}
 	}
 }
-//extension String: ParameterEncoding {
-//	
-//	public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
-//		var request = try urlRequest.asURLRequest()
-//		request.httpBody = data(using: .utf8, allowLossyConversion: false)
-//		return request
-//	}
-//}
-
-
-

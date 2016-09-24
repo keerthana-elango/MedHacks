@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="XbP-R4-ALu">
             <objects>
-                <viewController id="YPH-Pg-gSf" sceneMemberID="viewController">
+                <viewController id="YPH-Pg-gSf" customClass="ViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PBJ-4g-wUx"/>
                         <viewControllerLayoutGuide type="bottom" id="zjC-1z-6Cp"/>
@@ -17,13 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="NEG-eM-aWs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="glu-bE-jDu">
+                                <frame key="frameInset" width="375" height="351"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="8tl-0d-mzq"/>
+                                    <constraint firstAttribute="width" constant="375" id="FDA-V6-ICa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Are You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S5-H1-WEf">
+                                <frame key="frameInset" minX="9" minY="82" width="357" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-WR-CiA">
+                                <frame key="frameInset" minX="56" minY="306" width="262" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Begin Recording" backgroundImage="buyNowButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-aZ-exa">
+                                <frame key="frameInset" minX="21" minY="122" width="333" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerY" secondItem="NEG-eM-aWs" secondAttribute="centerY" id="Cbk-8t-V8G"/>
+                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="Wx0-hp-5jT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yzx-9y-Egl"/>
+                    <connections>
+                        <outlet property="beginRecordingButton" destination="Ehy-WR-CiA" id="Ft3-Dh-1Xt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOs-zv-TG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="107"/>
+            <point key="canvasLocation" x="964" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FUf-cw-DAN">
@@ -42,4 +79,8 @@
             <point key="canvasLocation" x="257" y="108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1" width="1426" height="1066"/>
+        <image name="buyNowButton" width="2100" height="1500"/>
+    </resources>
 </document>

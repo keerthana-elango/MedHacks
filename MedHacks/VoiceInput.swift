@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class MainViewController: UIViewController {
+class ViewController: UIViewController {
 	
     @IBOutlet weak var beginRecordingButton: UIButton!
 	override func viewDidLoad() {

@@ -1,0 +1,48 @@
+//
+//  ViewController.swift
+//  MedHacks
+//
+//  Created by Olivia on 9/23/16.
+//  Copyright © 2016 Olivia. All rights reserved.
+//
+
+import UIKit
+import Alamofire
+
+class ViewController: UIViewController {
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Data from user input
+		let myString = "Today I'm feeling sad"
+		
+		// Post request
+		Alamofire.request("http://mywebsite.com/post", method: .post, parameters: [:], encoding: "myString", headers: [:])
+		
+		// Get Request
+		Alamofire.request("http://mywebsite.com/get").responseJSON { response in
+			print(response.request)  // original URL request
+			print(response.response) // HTTP URL response
+			print(response.data)     // server data
+			print(response.result)   // result of response serialization
+			
+			if let JSON = response.result.value {
+				print("JSON: \(JSON)")
+			}
+		}
+		
+	}
+}
+extension String: ParameterEncoding {
+	
+	public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+		var request = try urlRequest.asURLRequest()
+		request.httpBody = data(using: .utf8, allowLossyConversion: false)
+		return request
+	}
+	
+}
+
+
+

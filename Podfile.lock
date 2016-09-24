@@ -1,18 +1,12 @@
 PODS:
   - Alamofire (4.0.0)
-  - Cosmos (6.0.1)
-  - ProjectOxfordFace (1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - Cosmos (~> 6.0)
-  - ProjectOxfordFace
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
-  Cosmos: 374de9804e382a23662908688ab15c8f473977fe
-  ProjectOxfordFace: 6ee1f7b0a39b5d1cba20cf100d8f9d11ad264790
 
-PODFILE CHECKSUM: 88d714ba4e9c0b40463959c753af98897b923764
+PODFILE CHECKSUM: f0af40508c126c0ee8f2eabf8ec3ea3fa681c314
 
 COCOAPODS: 1.0.1

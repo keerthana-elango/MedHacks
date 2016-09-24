@@ -12,7 +12,6 @@
 		451431C91D9624DC0050253B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451431C71D9624DC0050253B /* Main.storyboard */; };
 		451431CB1D9624DC0050253B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451431CA1D9624DC0050253B /* Assets.xcassets */; };
 		451431CE1D9624DC0050253B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451431CC1D9624DC0050253B /* LaunchScreen.storyboard */; };
-		C7303B26A620B1272D14EAFF /* Pods_MedHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF70A5A7E295BD2A1D7889A0 /* Pods_MedHacks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		451431CF1D9624DC0050253B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E07DD674DBA98326212BD96 /* Pods-MedHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.release.xcconfig"; sourceTree = "<group>"; };
 		8AB5C6A5CF9342FF3DF80C60 /* Pods-MedHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.debug.xcconfig"; sourceTree = "<group>"; };
-		BF70A5A7E295BD2A1D7889A0 /* Pods_MedHacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedHacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7303B26A620B1272D14EAFF /* Pods_MedHacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +81,6 @@
 		EC25E92610DFA292F796C540 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF70A5A7E295BD2A1D7889A0 /* Pods_MedHacks.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

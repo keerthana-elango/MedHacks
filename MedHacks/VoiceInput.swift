@@ -14,13 +14,15 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Data from user input
+		// Data from user input - currently bs
 		let myString = "Today I'm feeling sad"
 		
-		// Post request
+		print(myString)
+		
+		// Post request - new for Swift 3.0 & Alamofire 4.0, needs to be tested
 		Alamofire.request("http://mywebsite.com/post", method: .post, parameters: [:], encoding: "myString", headers: [:])
 		
-		// Get Request
+		// Get Request - 100% works
 		Alamofire.request("http://mywebsite.com/get").responseJSON { response in
 			print(response.request)  // original URL request
 			print(response.response) // HTTP URL response

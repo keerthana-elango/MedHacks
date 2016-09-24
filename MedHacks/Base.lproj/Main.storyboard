@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="XbP-R4-ALu">
             <objects>
-                <viewController id="YPH-Pg-gSf" customClass="ViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YPH-Pg-gSf" userLabel="Main View Controller" customClass="MainViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PBJ-4g-wUx"/>
                         <viewControllerLayoutGuide type="bottom" id="zjC-1z-6Cp"/>
@@ -18,29 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="glu-bE-jDu">
-                                <frame key="frameInset" width="375" height="351"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="glu-bE-jDu">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="8tl-0d-mzq"/>
-                                    <constraint firstAttribute="width" constant="375" id="FDA-V6-ICa"/>
+                                    <constraint firstAttribute="width" constant="375" id="0Ym-kp-L71"/>
+                                    <constraint firstAttribute="height" constant="667" id="mHw-aM-Lhg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Are You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S5-H1-WEf">
-                                <frame key="frameInset" minX="9" minY="82" width="357" height="75"/>
+                                <frame key="frameInset" minX="77" minY="162" width="221" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-WR-CiA">
-                                <frame key="frameInset" minX="56" minY="306" width="262" height="45"/>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7Y-8s-2px">
+                                <frame key="frameInset" minY="354" width="375" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Begin Recording" backgroundImage="buyNowButton">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUJ-bP-7V1">
+                                        <frame key="frameInset" minX="113" minY="236" width="148" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="See Progress">
+                                            <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="KVV-mx-g1e" kind="show" id="j6t-ai-dNs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-WR-CiA">
+                                <frame key="frameInset" minX="56" minY="331" width="262" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Begin Recording Answer" backgroundImage="buyNowButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-aZ-exa">
-                                <frame key="frameInset" minX="21" minY="122" width="333" height="119"/>
+                                <frame key="frameInset" minX="21" minY="187" width="333" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -49,8 +66,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerY" secondItem="NEG-eM-aWs" secondAttribute="centerY" id="Cbk-8t-V8G"/>
-                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="Wx0-hp-5jT"/>
+                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="fhU-xl-yko"/>
+                            <constraint firstItem="glu-bE-jDu" firstAttribute="centerY" secondItem="NEG-eM-aWs" secondAttribute="centerY" id="sSo-Uh-kMh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yzx-9y-Egl"/>
@@ -61,6 +78,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOs-zv-TG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="106.59670164917542"/>
+        </scene>
+        <!--Progress View Controller-->
+        <scene sceneID="JLZ-bm-il7">
+            <objects>
+                <viewController id="KVV-mx-g1e" userLabel="Progress View Controller" customClass="ProgressViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rOC-sF-xOS"/>
+                        <viewControllerLayoutGuide type="bottom" id="HRe-9Q-l0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="voM-Sc-5H4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7Q-LB-gky">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1Ah-Nj-N3H"/>
+                                    <constraint firstAttribute="width" constant="259" id="Rvz-Fw-kfj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRV-o0-tE3">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Nk1-VU-h8j"/>
+                                    <constraint firstAttribute="width" constant="259" id="YIM-kI-2GL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C7Q-LB-gky" firstAttribute="top" secondItem="rOC-sF-xOS" secondAttribute="bottom" constant="49" id="HP2-2t-fYv"/>
+                            <constraint firstItem="C7Q-LB-gky" firstAttribute="centerX" secondItem="voM-Sc-5H4" secondAttribute="centerX" id="Hhr-tr-1mY"/>
+                            <constraint firstItem="ZRV-o0-tE3" firstAttribute="top" secondItem="C7Q-LB-gky" secondAttribute="bottom" constant="46" id="JZF-74-zgx"/>
+                            <constraint firstItem="ZRV-o0-tE3" firstAttribute="centerX" secondItem="voM-Sc-5H4" secondAttribute="centerX" id="R7T-bX-QcV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="C7Q-LB-gky" id="Jhx-n9-Jt5"/>
+                        <outlet property="pieChartView" destination="ZRV-o0-tE3" id="TN5-XH-4pZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5U-jt-FZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FUf-cw-DAN">
@@ -80,7 +141,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background1" width="1426" height="1066"/>
+        <image name="background" width="2246" height="1340"/>
         <image name="buyNowButton" width="2100" height="1500"/>
     </resources>
 </document>

@@ -13,14 +13,15 @@ var tone_analyzer = watson.tone_analyzer({
 });
 
 //schema  to save data and crete a column 
-
+/*
 var UserSchema = new mongoose.Schema({
  name: String
 })
 mongoose.model('User', UserSchema); // We are setting this Schema in our Models as 'User'
 var User = mongoose.model('User')
-
-
+//namibg a database
+mongoose.connect('mongodb://localhost/basic_mongoose');
+*/
 
 // Create an Express App
 var app = express();
@@ -31,8 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Require path
 var path = require('path');
 
-//namibg a database
-mongoose.connect('mongodb://localhost/basic_mongoose');
+
 // Setting our Static Folder Directory
 app.use(express.static(path.join(__dirname, './static')));
 // Setting our Views Folder Directory
@@ -74,17 +74,19 @@ app.get('/data',function(req,res){
 app.post('/post', function(req, res) {
  //   var user = new User({name: req.body.name});
  
- //  // var a = req.body.params
+ var message = req.body.message
  // console.log(req.body)
 
-  tone_analyzer.tone({ text: "I am testing and i am happy"},
+  tone_analyzer.tone({ text: req.body.message},
   function(err, tone) {
     if (err)
       console.log(err);
     else
+      console.log("Message: " + message)
       console.log(JSON.stringify(tone, null, 2));
 
 });
+
   //Saving later
   // Try to save that new user to the database (this is the method that actually inserts into the db) and run a callback function with an error (if any) from the operation.
   // user.save(function(err) {
@@ -111,7 +113,7 @@ app.post('/post', function(req, res) {
 
 
 // Setting our Server to Listen on Port: 8000
-app.listen(3000, function(){
-  console.log('listening on');
+app.listen(8000, function(){
+  console.log('Server Running');
 });
 

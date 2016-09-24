@@ -23,6 +23,7 @@
 		451431CA1D9624DC0050253B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		451431CD1D9624DC0050253B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		451431CF1D9624DC0050253B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45B63E091D964234004D5F2A /* MedHacks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedHacks-Bridging-Header.h"; sourceTree = "<group>"; };
 		6E07DD674DBA98326212BD96 /* Pods-MedHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.release.xcconfig"; sourceTree = "<group>"; };
 		8AB5C6A5CF9342FF3DF80C60 /* Pods-MedHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		BF70A5A7E295BD2A1D7889A0 /* Pods_MedHacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedHacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +44,7 @@
 		451431B71D9624DC0050253B = {
 			isa = PBXGroup;
 			children = (
+				45B63E091D964234004D5F2A /* MedHacks-Bridging-Header.h */,
 				451431C21D9624DC0050253B /* MedHacks */,
 				451431C11D9624DC0050253B /* Products */,
 				D7A047C5A9B819FFCE0CB4B7 /* Pods */,

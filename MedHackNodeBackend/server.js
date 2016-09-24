@@ -1,6 +1,13 @@
 // Require the Express Module
 var express = require('express');
 var mongoose = require('mongoose');
+var fs = require('fs')
+// Create an Express App
+var app = express();
+// Require body-parser (to receive post data from clients)
+var bodyParser = require('body-parser');
+// Integrate body-parser with our App
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //IBM Watson 
 var watson = require('watson-developer-cloud');
@@ -11,27 +18,23 @@ var tone_analyzer = watson.tone_analyzer({
   version: 'v3',
   version_date: '2016-05-19'
 });
-
-//schema  to save data and crete a column 
-/*
-var UserSchema = new mongoose.Schema({
- name: String
+// Database
+var toneSchema = new mongoose.Schema({
+ day: String,
+ angry: Number,
+ disgust: Number,
+ fear: Number,
+ joy: Number,
+ sadness: Number
 })
-mongoose.model('User', UserSchema); // We are setting this Schema in our Models as 'User'
-var User = mongoose.model('User')
-//namibg a database
-mongoose.connect('mongodb://localhost/basic_mongoose');
-*/
 
-// Create an Express App
-var app = express();
-// Require body-parser (to receive post data from clients)
-var bodyParser = require('body-parser');
-// Integrate body-parser with our App
-app.use(bodyParser.urlencoded({ extended: true }));
+mongoose.model('User', toneSchema); 
+var User = mongoose.model('User')
+mongoose.connect('mongodb://localhost/basic_mongoose');
+
+
 // Require path
 var path = require('path');
-
 
 // Setting our Static Folder Directory
 app.use(express.static(path.join(__dirname, './static')));
@@ -72,20 +75,33 @@ app.get('/data',function(req,res){
 
 // Post  data  intially to save in database 
 app.post('/post', function(req, res) {
- //   var user = new User({name: req.body.name});
+ console.log("Message: " + req.body.message)
  
- var message = req.body.message
- // console.log(req.body)
-
-  tone_analyzer.tone({ text: req.body.message},
+ tone_analyzer.tone(
+  { text: req.body.message },
   function(err, tone) {
     if (err)
+    {
       console.log(err);
+    }
+    
     else
-      console.log("Message: " + message)
-      console.log(JSON.stringify(tone, null, 2));
+    {
+      console.log(JSON.stringify(tone, null, 1));
+      fs.writeFile('tmp/helloworld.txt', tone, function (err) {
+      if (err) 
+        return console.log(err);
+    }
+  }
 
+  
 });
+// Write to text file
+
+
+
+ //var tone = tone["tone_categories"]
+ console.log("... End of POST operation...")
 
   //Saving later
   // Try to save that new user to the database (this is the method that actually inserts into the db) and run a callback function with an error (if any) from the operation.

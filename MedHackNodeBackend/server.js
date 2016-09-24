@@ -87,15 +87,15 @@ app.post('/post', function(req, res) {
     
     else
     {
-      console.log(JSON.stringify(tone, null, 1));
+      console.log(JSON.stringify(tone, null, 1))
       fs.writeFile('tmp/helloworld.txt', tone, function (err) {
-      if (err) 
-        return console.log(err);
+        if (err) 
+          return console.log(err);
+      })
     }
-  }
 
   
-});
+})
 // Write to text file
 
 

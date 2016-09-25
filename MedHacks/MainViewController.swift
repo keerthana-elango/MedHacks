@@ -44,24 +44,6 @@ class MainViewController: UIViewController, SFSpeechRecognizerDelegate {
 				}
 			})
 		}
-		
-//		Alamofire.request("https://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/data", parameters: parameters).responseJSON { response in
-//			print(response.request)
-//			print(response.response)
-//			print(response.data)
-//			print(response.result)
-//		}
-		//
-//		Alamofire.request("http://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/data").responseJSON { response in
-//			print(response.request!)  // original URL request
-//			print(response.response!) // HTTP URL response
-//			print(response.data!)     // server data
-//			print(response.result)   // result of response serialization
-//			
-//			if let JSON = response.result.value {
-//				print("JSON: \(JSON)")
-//			}
-//}
 }
 	
     @IBOutlet weak var beginRecordingButton: UIButton!

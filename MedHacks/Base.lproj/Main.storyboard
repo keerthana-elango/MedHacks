@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="my3-3K-YHC"/>
+                    <tabBarItem key="tabBarItem" title="Video" image="play-button" id="my3-3K-YHC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4V-nU-55x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,10 +69,10 @@
                             </label>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaT-bT-Xcy">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="M5t-uT-ZAt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5t-uT-ZAt">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="292" id="AZg-IB-OWG"/>
-                                            <constraint firstAttribute="width" constant="332" id="l4K-7x-ija"/>
+                                            <constraint firstAttribute="width" constant="332" id="Vah-T3-EnB"/>
+                                            <constraint firstAttribute="height" constant="270" id="ZB1-gK-cmL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -80,11 +80,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="M5t-uT-ZAt" firstAttribute="centerX" secondItem="FaT-bT-Xcy" secondAttribute="centerX" id="41s-NN-Zam"/>
+                                    <constraint firstAttribute="height" constant="302" id="1E0-CI-jGX"/>
                                     <constraint firstAttribute="width" constant="375" id="9dD-Km-uQO"/>
-                                    <constraint firstAttribute="height" constant="338" id="Rqr-xR-t13"/>
+                                    <constraint firstItem="M5t-uT-ZAt" firstAttribute="centerX" secondItem="FaT-bT-Xcy" secondAttribute="centerX" id="cEg-H5-ufb"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-aZ-exa">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-WR-CiA">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="jMA-Kh-W45"/>
@@ -97,28 +102,23 @@
                                     <action selector="recordingButtonTapped:" destination="YPH-Pg-gSf" eventType="touchUpInside" id="5Jr-ZR-fJ9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-aZ-exa">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2S5-H1-WEf" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="2YC-MB-CWw"/>
-                            <constraint firstItem="FaT-bT-Xcy" firstAttribute="top" secondItem="Ehy-WR-CiA" secondAttribute="bottom" constant="-22" id="3CO-NI-vXk"/>
-                            <constraint firstItem="Ehy-WR-CiA" firstAttribute="top" secondItem="wH4-aZ-exa" secondAttribute="bottom" constant="44" id="5yw-wX-A5B"/>
+                            <constraint firstItem="2S5-H1-WEf" firstAttribute="leading" secondItem="glu-bE-jDu" secondAttribute="trailing" constant="-231" id="598-rp-VeD"/>
+                            <constraint firstItem="M5t-uT-ZAt" firstAttribute="top" secondItem="Ehy-WR-CiA" secondAttribute="bottom" constant="9" id="BJn-6q-e70"/>
                             <constraint firstItem="glu-bE-jDu" firstAttribute="centerY" secondItem="NEG-eM-aWs" secondAttribute="centerY" id="Cbk-8t-V8G"/>
                             <constraint firstItem="2S5-H1-WEf" firstAttribute="top" secondItem="PBJ-4g-wUx" secondAttribute="bottom" constant="80" id="EZ7-1Q-Rbd"/>
+                            <constraint firstItem="FaT-bT-Xcy" firstAttribute="top" secondItem="Ehy-WR-CiA" secondAttribute="bottom" constant="-20" id="Tid-uJ-6mN"/>
                             <constraint firstItem="wH4-aZ-exa" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="UJS-8C-nUc"/>
                             <constraint firstItem="glu-bE-jDu" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="Wx0-hp-5jT"/>
                             <constraint firstItem="wH4-aZ-exa" firstAttribute="top" secondItem="2S5-H1-WEf" secondAttribute="bottom" constant="-20" id="eVo-wE-N1B"/>
                             <constraint firstItem="Ehy-WR-CiA" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="g7d-ky-14c"/>
-                            <constraint firstItem="M5t-uT-ZAt" firstAttribute="top" secondItem="Ehy-WR-CiA" secondAttribute="bottom" constant="6" id="woa-hI-LEA"/>
+                            <constraint firstItem="Ehy-WR-CiA" firstAttribute="top" secondItem="wH4-aZ-exa" secondAttribute="bottom" constant="78" id="mlF-PD-3k5"/>
                             <constraint firstItem="FaT-bT-Xcy" firstAttribute="centerX" secondItem="NEG-eM-aWs" secondAttribute="centerX" id="wuy-S9-LEe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Omy-xC-wsu"/>
+                    <tabBarItem key="tabBarItem" title="Audio" image="microphone" id="Omy-xC-wsu"/>
                     <navigationItem key="navigationItem" id="yzx-9y-Egl"/>
                     <connections>
                         <outlet property="beginRecordingButton" destination="Ehy-WR-CiA" id="Ft3-Dh-1Xt"/>
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOs-zv-TG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="340"/>
+            <point key="canvasLocation" x="180" y="339.58020989505252"/>
         </scene>
         <!--Progress-->
         <scene sceneID="sLB-0s-X42">
@@ -153,7 +153,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NoY-pw-IpB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineGraph" translatesAutoresizingMaskIntoConstraints="NO" id="NoY-pw-IpB">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="305" id="J5t-8m-lRb"/>
                                             <constraint firstAttribute="height" constant="152" id="dzh-NK-mT1"/>
@@ -209,9 +209,9 @@
                             <constraint firstItem="kcS-dB-iWJ" firstAttribute="centerY" secondItem="7bE-Nf-hEZ" secondAttribute="centerY" id="UQo-sy-A0J"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="YxV-rX-noM"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="line-graph" id="tSf-r1-le4"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aI-sM-6h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,6 +222,10 @@
         <image name="background" width="2246" height="1340"/>
         <image name="blue" width="542" height="122"/>
         <image name="buyNowButton" width="2100" height="1500"/>
+        <image name="line-graph" width="32" height="32"/>
+        <image name="lineGraph" width="2502" height="1088"/>
+        <image name="microphone" width="32" height="32"/>
         <image name="pieGraph" width="1134" height="738"/>
+        <image name="play-button" width="32" height="32"/>
     </resources>
 </document>

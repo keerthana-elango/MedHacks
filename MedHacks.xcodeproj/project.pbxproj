@@ -19,6 +19,19 @@
 		45D4B3E41D97D67E002F8770 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4B3E31D97D67E002F8770 /* MessageComposer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		454D2D891D9720A5009CA423 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		451431C01D9624DC0050253B /* MedHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		451431C31D9624DC0050253B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +127,7 @@
 				451431BE1D9624DC0050253B /* Resources */,
 				3C8E99D3C08B62A7B431F77B /* [CP] Embed Pods Frameworks */,
 				509D2366AB8D3C3822A41CC3 /* [CP] Copy Pods Resources */,
+				454D2D891D9720A5009CA423 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AB5C6A5CF9342FF3DF80C60 /* Pods-MedHacks.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
 				INFOPLIST_FILE = MedHacks/Info.plist;
@@ -368,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E07DD674DBA98326212BD96 /* Pods-MedHacks.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
 				INFOPLIST_FILE = MedHacks/Info.plist;

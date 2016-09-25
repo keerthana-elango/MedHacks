@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MedHacks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Static.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9072C49294996053F6BC18A2AD0665A9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B788E26E800CAED8B538806DA3E60F23</key>
+		<key>577C17F8E682E8D700E9D05D376164AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

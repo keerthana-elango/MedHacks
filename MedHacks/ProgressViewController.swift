@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Charts
+import Charts
 
 class ProgressViewController: UIViewController {
 	
@@ -35,7 +35,7 @@ class ProgressViewController: UIViewController {
 			dataEntries.append(dataentry)
 		}
 		
-		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Percetage")
+		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Percentage")
 		
 		var datasets = [IChartDataSet]()
 		

@@ -65,25 +65,7 @@ class MainViewController: UIViewController, SFSpeechRecognizerDelegate {
             recognitionRequest.endAudio()
             recognitionTask.cancel()
             beginRecordingButton.setTitle("Start Recording", for: [])
-			
-//			let parameters = [
-//				"message" : "\(finalMessage)"
-//				
-//				]
-//				print(parameters)
-//			Alamofire.request("http://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/post", parameters: parameters).responseJSON { response in
-//				
-//				print(response.request!)  // original URL request
-//							print(response.response!) // HTTP URL response
-//							print(response.data!)     // server data
-//							print(response.result)   // result of response serialization
-//				
-////				print(response.result.value)
-//				//
-//								let JSON = response.result.value
-//									print("JSON: \(JSON)")
-			
-//			}
+
 	}
 		else {
             

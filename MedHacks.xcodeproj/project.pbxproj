@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40A7C6B236F22686C586F1C6 /* Pods_MedHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD043246D29F37E9A5485199 /* Pods_MedHacks.framework */; };
 		451431C41D9624DC0050253B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451431C31D9624DC0050253B /* AppDelegate.swift */; };
 		451431C61D9624DC0050253B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451431C51D9624DC0050253B /* MainViewController.swift */; };
 		451431C91D9624DC0050253B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451431C71D9624DC0050253B /* Main.storyboard */; };
@@ -54,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40A7C6B236F22686C586F1C6 /* Pods_MedHacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

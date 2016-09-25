@@ -6,4 +6,5 @@ target 'MedHacks' do
 
   # Pods for MedHacks
 pod 'Alamofire', '~> 4.0'
+pod 'Static', git: 'https://github.com/venmo/Static'
 end

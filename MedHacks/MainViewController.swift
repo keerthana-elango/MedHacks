@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Speech
 
-class ViewController: UIViewController, SFSpeechRecognizerDelegate {
+class MainViewController: UIViewController, SFSpeechRecognizerDelegate {
 	
     @IBOutlet weak var textView: UITextView!
 	override func viewDidLoad() {

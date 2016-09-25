@@ -4,6 +4,8 @@
 <dict>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To record what you are saying!</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To see your facial expression!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -40,8 +42,8 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-  <key>NSAllowsArbitraryLoads</key>
-  <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 </dict>
 </plist>

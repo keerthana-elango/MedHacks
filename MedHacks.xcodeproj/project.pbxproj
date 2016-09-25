@@ -15,6 +15,7 @@
 		451431CE1D9624DC0050253B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451431CC1D9624DC0050253B /* LaunchScreen.storyboard */; };
 		454D2D7B1D9720A5009CA423 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454D2D611D972024009CA423 /* Charts.framework */; };
 		454D2D7C1D9720A5009CA423 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 454D2D611D972024009CA423 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45ACBFD61D974C8100CA9322 /* apiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACBFD51D974C8100CA9322 /* apiEndpoint.swift */; };
 		45B20CC61D97228E00DD5CEB /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B20CC51D97228E00DD5CEB /* ProgressViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		451431CD1D9624DC0050253B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		451431CF1D9624DC0050253B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454D2D591D972023009CA423 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		45ACBFD51D974C8100CA9322 /* apiEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiEndpoint.swift; sourceTree = "<group>"; };
 		45B20CC51D97228E00DD5CEB /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		6E07DD674DBA98326212BD96 /* Pods-MedHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.release.xcconfig"; sourceTree = "<group>"; };
 		8AB5C6A5CF9342FF3DF80C60 /* Pods-MedHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacks/Pods-MedHacks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				451431C31D9624DC0050253B /* AppDelegate.swift */,
+				45ACBFD51D974C8100CA9322 /* apiEndpoint.swift */,
 				451431C51D9624DC0050253B /* MainViewController.swift */,
 				45B20CC51D97228E00DD5CEB /* ProgressViewController.swift */,
 				451431C71D9624DC0050253B /* Main.storyboard */,
@@ -327,6 +330,7 @@
 				45B20CC61D97228E00DD5CEB /* ProgressViewController.swift in Sources */,
 				451431C61D9624DC0050253B /* MainViewController.swift in Sources */,
 				451431C41D9624DC0050253B /* AppDelegate.swift in Sources */,
+				45ACBFD61D974C8100CA9322 /* apiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

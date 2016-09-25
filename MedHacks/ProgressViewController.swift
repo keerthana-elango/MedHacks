@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 class ProgressViewController: UIViewController {
 	
@@ -35,7 +35,7 @@ class ProgressViewController: UIViewController {
 			dataEntries.append(dataentry)
 		}
 		
-		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
+		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Percetage")
 		
 		var datasets = [IChartDataSet]()
 		
@@ -58,7 +58,7 @@ class ProgressViewController: UIViewController {
 		pieChartDataSet.colors = colors
 		
 		
-		let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Units Sold")
+		let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Percentage")
 		
 		var datasets1 = [IChartDataSet]()
 		

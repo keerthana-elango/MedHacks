@@ -118,7 +118,7 @@
                         <constraints>
                             <constraint firstItem="ZLr-7F-xdh" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="Amf-b2-p2I"/>
                             <constraint firstItem="Rsx-fB-hZC" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="BwA-eL-QCf"/>
-                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="top" secondItem="Rsx-fB-hZC" secondAttribute="bottom" constant="126" id="geV-57-Hba"/>
+                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="top" secondItem="Rsx-fB-hZC" secondAttribute="bottom" id="geV-57-Hba"/>
                             <constraint firstItem="Rsx-fB-hZC" firstAttribute="top" secondItem="Y1D-h3-CvO" secondAttribute="bottom" constant="59" id="k2p-5Z-stb"/>
                         </constraints>
                     </view>

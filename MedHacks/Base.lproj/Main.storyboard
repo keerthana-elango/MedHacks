@@ -158,9 +158,6 @@
                                         <frame key="frameInset" minX="70" minY="572" width="62" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="See Data"/>
-                                        <connections>
-                                            <segue destination="Js5-fY-0EY" kind="show" id="ISG-I5-meg"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-ZC-MfP">
                                         <frame key="frameInset" minX="212" minY="572" width="106" height="30"/>
@@ -204,53 +201,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aI-sM-6h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="-1179.7601199400301"/>
-        </scene>
-        <!--ONotes-->
-        <scene sceneID="n5n-3C-yXy">
-            <objects>
-                <tableViewController id="Js5-fY-0EY" customClass="ListNotesTableViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="gUN-oV-Ba6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.99215686319999996" green="0.41176471110000001" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" rowHeight="60" id="D7y-Qp-cZl" customClass="ListNotesTableViewCell" customModule="MedHacks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D7y-Qp-cZl" id="r1a-nd-VGy">
-                                    <frame key="frameInset" width="375" height="59"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5r-z1-FJG" userLabel="Emotion">
-                                            <frame key="frameInset" minX="8" minY="18" width="592" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.96736860280000003" green="1" blue="0.95416283609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.99215686319999996" green="0.41176471110000001" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="noteTitleLabel" destination="O5r-z1-FJG" id="Av8-eN-9qI"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Js5-fY-0EY" id="Wtb-yD-gtk"/>
-                            <outlet property="delegate" destination="Js5-fY-0EY" id="2Wd-S0-TlS"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="ONotes" id="s8v-4P-xXY">
-                        <barButtonItem key="rightBarButtonItem" title="Back" id="Yro-ip-cyz">
-                            <color key="tintColor" red="0.99215686319999996" green="0.41176471110000001" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwz-tE-Xc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="871" y="-1180"/>
         </scene>
     </scenes>
     <resources>

@@ -17,13 +17,10 @@ class ProgressViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Do any additional setup after loading the view.
+		let emotions = ["Anger", "Disgust", "Fear", "Joy", "Sadness"]
+		let percentage = [36.0, 19.0, 6.0, 13.0, 26.0]
 		
-		let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-		let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-		
-		setChart(dataPoints: months, values: unitsSold)
-		
+		setChart(dataPoints: emotions, values: percentage)
 	}
 	
 	func setChart(dataPoints: [String], values: [Double]) {
@@ -31,17 +28,17 @@ class ProgressViewController: UIViewController {
 		var dataEntries: [ChartDataEntry] = []
 		
 		for i in 0..<dataPoints.count {
-			let dataentry = ChartDataEntry(x: Double(i),y: values[i])
-			dataEntries.append(dataentry)
+			let dataEntry = ChartDataEntry(x: Double(i),y: values[i])
+			dataEntries.append(dataEntry)
 		}
 		
-		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Percentage")
+		let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Emotion")
 		
-		var datasets = [IChartDataSet]()
+		var dataSets = [IChartDataSet]()
 		
-		datasets.append(pieChartDataSet)
+		dataSets.append(pieChartDataSet)
 		
-		let pieChartData = PieChartData(dataSets: datasets)
+		let pieChartData = PieChartData(dataSets: dataSets)
 		pieChartView.data = pieChartData
 		
 		var colors: [UIColor] = []

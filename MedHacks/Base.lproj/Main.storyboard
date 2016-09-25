@@ -9,7 +9,7 @@
         <!--Video-->
         <scene sceneID="vte-aA-Dtu">
             <objects>
-                <viewController id="mnn-NL-AMI" userLabel="Video" sceneMemberID="viewController">
+                <viewController id="mnn-NL-AMI" userLabel="Video" customClass="VideoViewController" customModule="MedHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4PY-Dd-rOR"/>
                         <viewControllerLayoutGuide type="bottom" id="n9A-oK-axa"/>
@@ -17,13 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="6iG-oG-lXR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-Qc-dN9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="eH0-Zi-BDi"/>
+                                    <constraint firstAttribute="height" constant="380" id="fJB-tR-H9t"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Are You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-cb-IaH">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-s2-Rxx">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YTo-Qc-dN9" firstAttribute="centerX" secondItem="6iG-oG-lXR" secondAttribute="centerX" id="87b-wL-zc4"/>
+                            <constraint firstItem="RGH-s2-Rxx" firstAttribute="centerX" secondItem="6iG-oG-lXR" secondAttribute="centerX" id="CgS-yj-7VP"/>
+                            <constraint firstItem="RGH-s2-Rxx" firstAttribute="top" secondItem="tx1-cb-IaH" secondAttribute="bottom" constant="-20" id="FfD-d9-UY7"/>
+                            <constraint firstItem="RGH-s2-Rxx" firstAttribute="top" secondItem="4PY-Dd-rOR" secondAttribute="bottom" constant="51" id="H3S-Ek-hwn"/>
+                            <constraint firstItem="tx1-cb-IaH" firstAttribute="centerX" secondItem="6iG-oG-lXR" secondAttribute="centerX" id="r8n-3t-NrB"/>
+                            <constraint firstItem="YTo-Qc-dN9" firstAttribute="top" secondItem="RGH-s2-Rxx" secondAttribute="bottom" constant="16.5" id="veA-3E-K5l"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="my3-3K-YHC"/>
+                    <connections>
+                        <outlet property="videoView" destination="YTo-Qc-dN9" id="hKH-At-vKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4V-nU-55x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="-173"/>
+            <point key="canvasLocation" x="180" y="-173.16341829085459"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="PsD-mY-ld5">
@@ -165,24 +195,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLr-7F-xdh" customClass="PieChartView" customModule="Charts">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="290" id="4vQ-73-AtI"/>
-                                    <constraint firstAttribute="width" constant="360" id="QuC-ZK-kEo"/>
+                                    <constraint firstAttribute="height" constant="260" id="MVN-20-1RH"/>
+                                    <constraint firstAttribute="width" constant="330" id="wfk-G7-LPw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsx-fB-hZC" customClass="LineChartView" customModule="Charts">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Jnw-Iu-a5y"/>
-                                    <constraint firstAttribute="height" constant="300" id="P3s-tU-fUn"/>
+                                    <constraint firstAttribute="height" constant="230" id="4jn-Rl-yrv"/>
+                                    <constraint firstAttribute="width" constant="330" id="h5u-JA-m1n"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="Amf-b2-p2I"/>
-                            <constraint firstItem="Rsx-fB-hZC" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="BwA-eL-QCf"/>
-                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="top" secondItem="Rsx-fB-hZC" secondAttribute="bottom" id="geV-57-Hba"/>
-                            <constraint firstItem="Rsx-fB-hZC" firstAttribute="top" secondItem="Y1D-h3-CvO" secondAttribute="bottom" constant="59" id="k2p-5Z-stb"/>
+                            <constraint firstItem="Rsx-fB-hZC" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="I3t-o6-5oV"/>
+                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="top" secondItem="Rsx-fB-hZC" secondAttribute="bottom" constant="13" id="VYS-ZD-qrN"/>
+                            <constraint firstItem="ZLr-7F-xdh" firstAttribute="centerX" secondItem="7bE-Nf-hEZ" secondAttribute="centerX" id="ck2-ta-8lf"/>
+                            <constraint firstItem="Rsx-fB-hZC" firstAttribute="top" secondItem="Y1D-h3-CvO" secondAttribute="bottom" constant="66" id="rq8-Xn-r9E"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="YxV-rX-noM"/>
@@ -193,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aI-sM-6h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="-851"/>
+            <point key="canvasLocation" x="180" y="-851.42428785607206"/>
         </scene>
         <!--Item-->
         <scene sceneID="1VE-Sh-hKH">

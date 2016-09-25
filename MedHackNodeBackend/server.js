@@ -87,8 +87,11 @@ app.post('/post', function(req, res) {
     
     else
     {
-      console.log(JSON.stringify(tone, null, 1))
-      fs.writeFile('tmp/helloworld.txt', tone, function (err) {
+      var JSONText = JSON.stringify(tone, null, 1)
+      console.log(JSONText)
+
+      // Write / Overwrite to a file
+      fs.writeFile('JSON/rawData.txt', JSONText, function (err) {
         if (err) 
           return console.log(err);
       })
@@ -100,7 +103,7 @@ app.post('/post', function(req, res) {
 
 
 
- //var tone = tone["tone_categories"]
+ var tone = tone["tone_categories"]
  console.log("... End of POST operation...")
 
   //Saving later

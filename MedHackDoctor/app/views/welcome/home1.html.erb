@@ -1,0 +1,73 @@
+<h1>Positivity Dashboard</h1> 
+<head> 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ["Anger", 0.092533],
+          ["Disgust", 0.009252],
+          ["Fear", 0.081418],
+          ["Joy", 0.908085],
+          ["Sadness", 0.125333]
+        ]);
+
+        var options = {
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart', 'line']});
+      google.charts.setOnLoadCallback(drawLineColors);
+
+      function drawLineColors() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'X');
+      data.addColumn('number', 'angry');
+      data.addColumn('number', 'disgust');
+      data.addColumn('number', 'fear');
+      data.addColumn('number', 'joy');
+      data.addColumn('number', 'sadness');
+
+      data.addRows([
+        ['Sunday', 10.5, 0, 4, 0, 0],    ['Monday', 10, 5, 2, 4, 7],   ['Tuesday', 23, 15, 16, 13, 18],  
+        ['Wednesday', 17, 9, 10, 12, 15],   ['Thursday', 18, 10, 12, 18, 19],  ['Friday', 9, 5, 7, 8, 5],  
+        ['Saturday', 11, 3, 10, 8, 9]
+      ]);
+
+      var options = {
+        title: "Act positive!",
+        curveType: 'function',
+        hAxis: {
+          title: 'Day'
+        },
+        vAxis: {
+          title: 'Percentage'
+        },
+        colors: ['#a52714', '#f97138', '#023326', '#E040FB', '#CDDC39']
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+
+  </head>
+  <body>
+    <p>Think Positive!</p>
+    <div id="piechart" style="width: 500px; height: 300px;"></div>
+    <p>Act Positive!</p>
+    <div id="chart_div" style=" height: 400px;"></div>
+    
+    
+  </body>

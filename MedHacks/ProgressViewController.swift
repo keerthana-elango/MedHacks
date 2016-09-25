@@ -20,10 +20,10 @@ class ProgressViewController: UIViewController {
 		let emotions = ["Anger", "Disgust", "Fear", "Joy", "Sadness"]
 		let percentage = [36.0, 19.0, 6.0, 13.0, 26.0]
 		
-		setChart(dataPoints: emotions, values: percentage)
+		setChart(emotions, values: percentage)
 	}
 	
-	func setChart(dataPoints: [String], values: [Double]) {
+	func setChart(_ dataPoints: [String], values: [Double]) {
 		
 		var dataEntries: [ChartDataEntry] = []
 		

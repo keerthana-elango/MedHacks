@@ -12,6 +12,7 @@ import Speech
 
 class ViewController: UIViewController, SFSpeechRecognizerDelegate {
 	
+    @IBOutlet weak var textView: UITextView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -86,27 +87,25 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             recognitionRequest.endAudio()
 			print(finalMessage)
 			
-			
-//			let parameters: Parameters = [
-//				"message": "\(finalMessage)",
-//				]
-//			
-//			Alamofire.request("http://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/post", parameters: parameters).responseJSON { response in
-//				
-//				let JSON = response.result.value
-//					print("JSON: \(JSON)")
-//			et message = "I am ashish"{
 			let parameters = [
-				"message" : "Hello how are you"
+				"message" : "\(finalMessage)"
 				
 				]
 				print(parameters)
-				Alamofire.request("http://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/post",parameters:parameters,encoding: .JSON).respondJSON{ response in
-					print(response)
-				}
-
+			Alamofire.request("http://myfirstelasticbeans123-env1.us-west-2.elasticbeanstalk.com/post", parameters: parameters).responseJSON { response in
+				
+				print(response.request!)  // original URL request
+							print(response.response!) // HTTP URL response
+							print(response.data!)     // server data
+							print(response.result)   // result of response serialization
+				
+//				print(response.result.value)
+				//
+								let JSON = response.result.value
+									print("JSON: \(JSON)")
 			
-        } else {
+			}}
+		else {
             
             beginRecordingButton.setTitle("Stop Recording", for: [])
 			
@@ -125,6 +124,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                     recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
                         
                         if let result = result {
+                            
+                            self.textView.text = result.bestTranscription.formattedString
                             
                             self.finalMessage = result.bestTranscription.formattedString
 							print(self.finalMessage)
